@@ -40,6 +40,30 @@ export default function Home() {
     console.log(popupBlocked);
   }, [popupBlocked]);
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.innerHTML = `
+      var atOptions = {
+        'key': 'a8ce3ac70a0467df0823cbea30743e2a',
+        'format': 'iframe',
+        'height': 50,
+        'width': 320,
+        'params': {}
+      };
+      (function() {
+        var script = document.createElement('script');
+        script.src = "//www.topcreativeformat.com/a8ce3ac70a0467df0823cbea30743e2a/invoke.js";
+        script.async = true;
+        document.head.appendChild(script);
+      })();
+    `;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   return (
     <main className="flex min-h-screen flex-col items-center gap-10 p-5 mt-20">
       <script
