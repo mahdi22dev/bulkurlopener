@@ -20,10 +20,6 @@ export default function RootLayout({
     <html lang="en" className="bg-slate-200">
       <body className={inter.className}>
         <Nav />
-        <Script
-          type="text/javascript"
-          src="//www.topcreativeformat.com/a8ce3ac70a0467df0823cbea30743e2a/invoke.js"
-        />
         {children}
       </body>
     </html>
