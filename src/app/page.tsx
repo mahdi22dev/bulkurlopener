@@ -27,7 +27,7 @@ export default function Home() {
     linksArray.forEach((link, index) => {
       setTimeout(() => {
         window.open(link.trim(), "_blank");
-      }, index * 500); // 500ms delay between each link opening
+      }, index * 100); // 500ms delay between each link opening
     });
   };
 
