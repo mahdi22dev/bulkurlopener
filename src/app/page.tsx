@@ -40,17 +40,12 @@ export default function Home() {
     console.log(popupBlocked);
   }, [popupBlocked]);
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.innerHTML = `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('shoordaird.com',7690927,document.createElement('script'));`;
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
   return (
     <main className="flex min-h-screen flex-col items-center gap-10 p-5 mt-20">
+      <script
+        type="text/javascript"
+        src="//www.topcreativeformat.com/a8ce3ac70a0467df0823cbea30743e2a/invoke.js"
+      ></script>
       <div className="w-3/4 lg:w-2/4 flex flex-col items-center gap-10">
         <h1 className="text-4xl">Very Fast Bulk URL Opener</h1>
         <div className="grid w-full gap-2">
