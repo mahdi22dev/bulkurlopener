@@ -39,9 +39,18 @@ export default function Home() {
   useEffect(() => {
     console.log(popupBlocked);
   }, [popupBlocked]);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.innerHTML = `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('shoordaird.com',7690927,document.createElement('script'));`;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
   return (
     <main className="flex min-h-screen flex-col items-center gap-10 p-5 mt-20">
-      <CustomScript />
       <div className="w-3/4 lg:w-2/4 flex flex-col items-center gap-10">
         <h1 className="text-4xl">Very Fast Bulk URL Opener</h1>
         <div className="grid w-full gap-2">
