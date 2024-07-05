@@ -38,10 +38,6 @@ export default function Home() {
     setBulkLinks("");
   };
 
-  useEffect(() => {
-    console.log(popupBlocked);
-  }, [popupBlocked]);
-
   return (
     <main className="flex min-h-screen flex-col items-center gap-10 p-5 mt-5">
       <div id="container-b68cb396e8d7119cb35d96bb3984c381"></div>
