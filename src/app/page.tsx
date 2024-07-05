@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useEffect, useState } from "react";
+import CustomScript from "./_components/Script";
 
 export default function Home() {
   const [bulkLinks, setBulkLinks] = useState("");
@@ -40,6 +41,7 @@ export default function Home() {
   }, [popupBlocked]);
   return (
     <main className="flex min-h-screen flex-col items-center gap-10 p-5 mt-20">
+      <CustomScript />
       <div className="w-3/4 lg:w-2/4 flex flex-col items-center gap-10">
         <h1 className="text-4xl">Very Fast Bulk URL Opener</h1>
         <div className="grid w-full gap-2">
