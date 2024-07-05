@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useEffect, useState } from "react";
 import CustomScript from "./_components/Script";
+import Banner from "./_components/Banner";
 
 export default function Home() {
   const [bulkLinks, setBulkLinks] = useState("");
@@ -40,36 +41,9 @@ export default function Home() {
     console.log(popupBlocked);
   }, [popupBlocked]);
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.innerHTML = `
-      var atOptions = {
-        'key': 'a8ce3ac70a0467df0823cbea30743e2a',
-        'format': 'iframe',
-        'height': 50,
-        'width': 320,
-        'params': {}
-      };
-      (function() {
-        var script = document.createElement('script');
-        script.src = "//www.topcreativeformat.com/a8ce3ac70a0467df0823cbea30743e2a/invoke.js";
-        script.async = true;
-        document.head.appendChild(script);
-      })();
-    `;
-    document.head.appendChild(script);
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
   return (
     <main className="flex min-h-screen flex-col items-center gap-10 p-5 mt-20">
-      <script
-        type="text/javascript"
-        src="//www.topcreativeformat.com/a8ce3ac70a0467df0823cbea30743e2a/invoke.js"
-      ></script>
+      <Banner />;
       <div className="w-3/4 lg:w-2/4 flex flex-col items-center gap-10">
         <h1 className="text-4xl">Very Fast Bulk URL Opener</h1>
         <div className="grid w-full gap-2">
