@@ -2,9 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { useEffect, useState } from "react";
-import CustomScript from "./_components/Script";
-import Banner from "./_components/Banner";
-import Script from "next/script";
 
 export default function Home() {
   const [bulkLinks, setBulkLinks] = useState("");
