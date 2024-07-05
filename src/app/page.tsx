@@ -68,6 +68,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <p className="mt-4">
+        <strong>Note:</strong> If pop-ups are blocked, a notification will
+        appear asking you to enable pop-ups for this site.
+      </p>
     </main>
   );
 }
