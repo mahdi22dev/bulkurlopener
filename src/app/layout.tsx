@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./_components/Nav";
 import Script from "next/script";
-import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Nav />
         {children}
-        <Analytics />
+        <GoogleAnalytics gaId="G-RPCKM58N7X" />
       </body>
     </html>
   );
