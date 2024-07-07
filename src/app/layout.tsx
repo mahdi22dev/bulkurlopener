@@ -19,13 +19,25 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-slate-200">
       <Script
-        async={true}
+        src="https://omoonsih.net/act/files/tag.min.js?z=7699498"
         data-cfasync="false"
-        src="//pl23704812.highrevenuenetwork.com/b68cb396e8d7119cb35d96bb3984c381/invoke.js"
+        async
       ></Script>
       <Script
-        type="text/javascript"
-        src="//pl23704912.highrevenuenetwork.com/af/f3/fe/aff3fed084bcf98a6b7a9ad7a590651d.js"
+        src="https://alwingulla.com/88/tag.min.js"
+        data-zone="77591"
+        async
+        data-cfasync="false"
+      ></Script>
+      <Script
+        async
+        data-cfasync="false"
+        src="//thubanoa.com/1?z=7699485"
+      ></Script>
+      <Script
+        src="https://pertawee.net/act/files/tag.min.js?z=7699492"
+        data-cfasync="false"
+        async
       ></Script>
       <body className={inter.className}>
         <Nav />
