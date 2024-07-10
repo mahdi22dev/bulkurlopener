@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import Script from "next/script";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -38,6 +39,19 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-10 p-5 mt-5">
       {/* <div id="container-b68cb396e8d7119cb35d96bb3984c381"></div> */}
+      {/* <div>
+        <Script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              aclib.runBanner({
+                zoneId: '8519526',
+              });
+            `,
+          }}
+        />
+      </div> */}
+
       <div className="w-3/4 lg:w-2/4 flex flex-col items-center gap-10">
         <h1 className="text-4xl">Very Fast Bulk URL Opener</h1>
         <div className="grid w-full gap-2">
@@ -65,11 +79,11 @@ export default function Home() {
             </Button>
           </div>
         </div>
+        <p className="mt-4">
+          <strong>Note:</strong> If pop-ups are blocked, a notification will
+          appear asking you to enable pop-ups for this site.
+        </p>
       </div>
-      <p className="mt-4">
-        <strong>Note:</strong> If pop-ups are blocked, a notification will
-        appear asking you to enable pop-ups for this site.
-      </p>
     </main>
   );
 }

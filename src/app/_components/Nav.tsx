@@ -12,7 +12,7 @@ function Nav() {
       </div>
       <div>
         <Button className="" variant={"link"} asChild>
-          <Link href={"/about"}>About</Link>
+          About
         </Button>
       </div>
     </nav>

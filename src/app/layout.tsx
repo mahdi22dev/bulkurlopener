@@ -22,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-slate-200">
       <head>
-        {/* Load Adcash library */}
         <Script
           id="aclib"
           type="text/javascript"
@@ -30,21 +29,22 @@ export default function RootLayout({
           strategy="beforeInteractive"
         />
       </head>
-      <body className={inter.className}>
-        <Nav />
-        {children}
-        <Script
-          id="aclib-run"
-          type="text/javascript"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+      <Script
+        id="aclib-run"
+        type="text/javascript"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
               aclib.runAutoTag({
                 zoneId: 'tu16zwd9ei',
               });
             `,
-          }}
-        />
+        }}
+      />
+      <body className={inter.className}>
+        <Nav />
+        {children}
+
         <GoogleAnalytics gaId="G-RPCKM58N7X" />
       </body>
     </html>
