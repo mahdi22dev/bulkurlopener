@@ -1,9 +1,6 @@
-// app/layout.js
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Nav from "./_components/Nav";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -41,8 +38,9 @@ export default function RootLayout({
             `,
         }}
       />
+
       <body className={inter.className}>
-        <Nav />
+        {/* <Nav /> */}
         {children}
 
         <GoogleAnalytics gaId="G-RPCKM58N7X" />
