@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { GoogleAnalytics } from "@next/third-parties/google";
+// import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,8 +42,8 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* <Nav /> */}
         {children}
-
-        <GoogleAnalytics gaId="G-RPCKM58N7X" />
+        {/* 
+        <GoogleAnalytics gaId="G-RPCKM58N7X" /> */}
       </body>
     </html>
   );
