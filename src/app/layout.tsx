@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-slate-200">
-      {/* <head>
+      <head>
         <Script
           id="aclib"
           type="text/javascript"
@@ -37,8 +37,7 @@ export default function RootLayout({
               });
             `,
         }}
-      /> */}
-      <Script type="text/javascript" src="/z-tu16zwd9ei"></Script>
+      />
       <body className={inter.className}>
         {/* <Nav /> */}
         {children}
