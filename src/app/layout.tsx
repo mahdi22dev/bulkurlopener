@@ -18,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-slate-200">
+      <meta name="ppck-ver" content="8e899832263beec79340a65f44e4a8de" />
       <head>
         <Script
           id="aclib"
