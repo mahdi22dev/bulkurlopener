@@ -19,27 +19,21 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-slate-200">
       <meta name="ppck-ver" content="8e899832263beec79340a65f44e4a8de" />
-      <head>
-        <Script
-          id="aclib"
-          type="text/javascript"
-          src="//acscdn.com/script/aclib.js"
-          strategy="beforeInteractive"
-        />
-      </head>
-      <Script
-        id="aclib-run"
-        type="text/javascript"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-              aclib.runAutoTag({
-                zoneId: 'tu16zwd9ei',
-              });
-            `,
-        }}
-      />
       <body className={inter.className}>
+        <Script id="popcash-script" strategy="lazyOnload">
+          {`
+          var uid = '481768';
+          var wid = '727202';
+          var pop_tag = document.createElement('script');
+          pop_tag.src = '//cdn.popcash.net/show.js';
+          document.body.appendChild(pop_tag);
+          pop_tag.onerror = function() {
+            pop_tag = document.createElement('script');
+            pop_tag.src = '//cdn2.popcash.net/show.js';
+            document.body.appendChild(pop_tag);
+          };
+        `}
+        </Script>
         {/* <Nav /> */}
         {children}
         {/* 
