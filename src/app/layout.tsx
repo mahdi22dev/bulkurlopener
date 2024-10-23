@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-slate-200">
       <meta name="ppck-ver" content="8e899832263beec79340a65f44e4a8de" />
+      <meta name="monetag" content="4f949ceaa2d654b1db6168d2279e87ab"></meta>
       <body className={inter.className}>
         <Script id="popcash-script" strategy="lazyOnload">
           {`
