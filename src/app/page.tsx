@@ -38,11 +38,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center gap-10 p-5 mt-5">
       <div className="w-3/4 lg:w-2/4 flex flex-col items-center gap-10">
         <h1 className="text-4xl">Very Fast Bulk URL Opener</h1>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `<script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vidrugnirtop.net',8383448,document.createElement('script'))</script>`,
-          }}
-        />
+
         <div className="grid w-full gap-2">
           <Textarea
             placeholder="Paste Your Links here"
